@@ -4,6 +4,11 @@ A modern full-stack web application designed to replace static spreadsheet repor
 
 ---
 
+## 🌐 Live Application Deployment
+
+- **Backend API (Render)**: [https://progress-tracker-s-t.onrender.com](https://progress-tracker-s-t.onrender.com)
+---
+
 ## ✨ Features & Capabilities
 
 - **📋 Project Hub (`/`)**:
@@ -118,39 +123,6 @@ node "node_modules/vite/bin/vite.js" --port 5173
 ```
 
 Visit `http://localhost:5173/` in your browser.
-
----
-
-## 🚀 Deployment Instructions
-
-### Part 1: Deploy Backend to Render
-
-1. Log into [Render Dashboard](https://dashboard.render.com/) and click **New +** -> **Web Service**.
-2. Connect your Git repository.
-3. Configure settings:
-   - **Root Directory**: `server`
-   - **Environment**: `Node`
-   - **Build Command**: `npm install`
-   - **Start Command**: `npm start`
-4. Add **Environment Variables**:
-   - `MONGODB_URI` = `mongodb+srv://...`
-   - `NODE_ENV` = `production`
-5. Click **Create Web Service**. Note your deployed URL (e.g. `https://st-tracker-backend.onrender.com`).
-
----
-
-### Part 2: Deploy Frontend to Vercel
-
-1. Log into [Vercel Dashboard](https://vercel.com/) and click **Add New** -> **Project**.
-2. Import your Git repository.
-3. Configure settings:
-   - **Framework Preset**: `Vite`
-   - **Root Directory**: `client`
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-4. Add **Environment Variable**:
-   - `VITE_API_BASE_URL` = `https://st-tracker-backend.onrender.com/api` (your Render backend URL)
-5. Click **Deploy**. Vercel will build and publish your application.
 
 ---
 
